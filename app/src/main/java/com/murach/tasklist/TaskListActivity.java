@@ -30,7 +30,28 @@ public class TaskListActivity extends Activity {
         if (insertId2 > 0) {
             sb.append("Row inserted! Insert Id: " + insertId2 + "\n");
         }
-        
+
+        // insert a third task
+        Task task3 = new Task(1, "Wash dishes", "", "0", "0");
+        long insertId3 = db.insertTask(task3);
+        if (insertId2 > 0) {
+            sb.append("Row inserted! Insert Id: " + insertId3 + "\n");
+        }
+
+        // insert a fourth task
+        Task task4 = new Task(1, "Get my grocery", "", "0", "0");
+        long insertId4 = db.insertTask(task4);
+        if (insertId2 > 0) {
+            sb.append("Row inserted! Insert Id: " + insertId4 + "\n");
+        }
+
+        // insert a fifth task
+        Task task5 = new Task(1, "Pick up my gown", "", "0", "0");
+        long insertId5 = db.insertTask(task5);
+        if (insertId2 > 0) {
+            sb.append("Row inserted! Insert Id: " + insertId5 + "\n");
+        }
+
         // update a task
         task.setId((int) insertId);
         task.setName("Update test");
